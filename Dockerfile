@@ -1,11 +1,10 @@
-FROM pwillie/mono-runtime:5.10
+FROM pwillie/mono-runtime:5.14
 
 # MAINTAINER Peter Wilson <pwillie@users.noreply.github.com>
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
     mono-xsp4 \
     libdigest-perl-md5-perl \
-    libmono-system-xml-linq4.0-cil \
   && rm -rf /var/lib/apt/lists/* /tmp/*
 
 # Add Tini
